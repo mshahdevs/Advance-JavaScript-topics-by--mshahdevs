@@ -12,13 +12,22 @@
 
 // Example usage:
 
-function add(a) {
+// function add(a) {
+//   return function (b){
+//     return function(){
+//         return a + b ;
+//     };
+//   };
+// }
+
+// console.log(add(3)(4)());
+
+
+function add(a){
   return function (b){
-    return function(){
-        return a + b ;
-    };
-  };
+    if(b) return add(a+b);
+    return a;
+  }
 }
 
-console.log(add(3)(4)());
-
+console.log(add(3)(4)(3)());
