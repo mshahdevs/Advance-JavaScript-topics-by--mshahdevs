@@ -88,7 +88,7 @@ Array.prototype.calculate = (logic) => {
   return output;
 };
 const rad = radius.calculate(area);
-console.log(rad);
+console.log(rad); //
 // console.log(calculate(radius, area));
 // console.log(calculate(radius, circumference));
 // console.log(calculate(radius, diameter));
